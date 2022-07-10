@@ -1,0 +1,147 @@
+$w750px: 750px;
+
+
+.contact-us {
+  padding: 120px 120px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 60px;
+  column-gap: 40px;
+  justify-content: space-around;
+
+  &__company {
+    width: 416px;
+    border-radius: 10px;
+    height: 296px;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-align: left;
+
+    &__header {
+      height: 89.2px;
+      background-color: #001C80;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 40px;
+
+      &__title {
+        text-transform: capitalize;
+        font-size: 18px;
+        color: #ffffff;
+      }
+    }
+
+    &__details {
+      padding-left: 40px;
+      display: flex;
+      height: calc(296px - 89.2px);
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      row-gap: 15px;
+
+      h2 {
+        color: #FFC83E;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+
+      figure {
+        display: flex;
+        align-items: center;
+
+        p {
+          margin-left: 10px;
+          opacity: 0.7;
+          color: #32324B;
+        }
+      }
+
+    }
+  }
+
+  &__form {
+    flex-grow: 2;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    min-width: 460px;
+
+    input,
+    textarea {
+      // margin-bottom: 20px;
+      background-color: rgba(50, 50, 75, 0.08);
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      display: block;
+      color: #000b33;
+      opacity: 0.8;
+      padding: 17px 30px;
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      height: 150px;
+      margin-bottom: 40px !important;
+    }
+
+    .btn {
+      width: 180px !important;
+      padding: 17px 33px;
+    }
+  }
+}
+
+@media only screen and (max-width: $w750px) {
+  .contact-us {
+    padding: 100px 12px;
+    margin: 0 auto;
+
+    &__company {
+      max-width: 416px;
+      width: 100% !important;
+      height: 296px;
+
+      &__header {
+        height: 89.2px;
+        background-color: #001C80;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 40px;
+
+        &__title {
+          font-size: 24px;
+        }
+      }
+
+      &__details {
+        padding-left: 40px;
+        margin-left: 30px;
+        align-items: flex-start;
+        row-gap: 15px;
+      }
+    }
+
+    &__form {
+      padding: 20px;
+      row-gap: 10px;
+      min-width: 300px !important;
+      align-items: center;
+
+      input,
+      textarea {
+        padding: 17px 30px;
+        font-size: 12px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+  }
+}
