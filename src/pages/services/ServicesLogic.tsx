@@ -3,6 +3,9 @@ import webAppImg from '../../assets/images/webapp-desktop.png'
 import mobileAppImg from '../../assets/images/mobileapp-desktop.png'
 import uiUxImg from '../../assets/images/ui-ux-desktop.png'
 import socialMediaImg from '../../assets/images/social-media-desktop.png'
+import client from '../../assets/images/client-desktop.png'
+import Carousel from '../../components/carousel/Carousel'
+
 
 export type service = {
   title: string,
@@ -80,5 +83,62 @@ export const ServicesLogic = () => {
         )
       })}
     </section>
+  )
+}
+
+type testimonyItem = {
+  name: string,
+  work: string,
+  image: string,
+  testimony: string,
+}
+
+const testimonyData = [
+  {
+    name: "john okoli",
+    work: "web developer",
+    image: client,
+    testimony: "OMG! I cannot believe that I have got a brand new landing page after contacting Webxiel, it was super easy to request and receive the website."
+  },
+  {
+    name: "john igweee",
+    work: "product manager",
+    image: client,
+    testimony: "OMG! I cannot believe that I have got a brand new landing page after contacting Webxiel, it was super easy to request and receive the website."
+  },
+  {
+    name: "okoli john",
+    work: "entrepreneur",
+    image: client,
+    testimony: "OMG! I cannot believe that I have got a brand new landing page after contacting Webxiel, it was super easy to request and receive the website."
+  }
+];
+
+let testimonyArray = testimonyData.map((item: testimonyItem) => {
+  const { name, work, image, testimony } = item;
+
+  return (
+    <article className='carousel__item'  key={name + work}>
+      <div className="carousel__item__container">
+        <p className="testimony">
+          {testimony}
+        </p>
+        <figure className="testifier">
+          <img src={image} alt="client" />
+          <figcaption className="testifier__about">
+            <p className="name">{name}</p>
+            <p className="work">{work}</p>
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+  )
+})
+
+export const TestimonyLogic = () => {
+  return (
+    <>
+      <Carousel slideCount={1} goRight={false} itemsArray={testimonyArray} />
+    </>
   )
 }

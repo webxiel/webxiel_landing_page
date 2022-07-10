@@ -1,3 +1,7 @@
+$w1440px: 1440px;
+$w1441px: 1441px;
+
+
 .services {
   width: 100vw;
 
@@ -71,7 +75,7 @@
 }
 
 .testimonial {
-  padding: 130px 120px;
+  padding: 130px 120px 30px;
   position: relative;
 
   &__right-shape {
@@ -105,48 +109,58 @@
   &__carousel {
     width: 100%;
     position: relative;
+    overflow: hidden;
 
-    &__container {
-      width: 636px;
-      height: 310px;
-      margin: 0 auto;
-      box-shadow: 0px 4px 40px rgba(43, 89, 255, 0.08);
-      border-radius: 10px;
+    .carousel__container{
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 60px;
-
-      .testimony {
-        max-width: 470px;
-        color: #000b33;
-        letter-spacing: 0.1px;
-        margin-bottom: 40px;
-      }
-
-      .testifier {
-        display: flex;
-        // justify-content: space-between;
-        align-items: center;
-
-        .testifier__about {
-          margin: 0 20px;
+      column-gap: 0;
+      transition: ease 1s;
+      
+      .carousel__item{
+  
+        .carousel__item__container {
+          width: 636px;
+          height: 310px;
+          margin: 0 auto;
+          box-shadow: 0px 4px 40px rgba(43, 89, 255, 0.08);
+          border-radius: 10px;
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
-
-          .name {
-            text-transform: capitalize;
-            font-size: 18px;
-            font-weight: 600;
+          align-items: center;
+          padding: 60px;
+    
+          .testimony {
+            max-width: 470px;
             color: #000b33;
-            margin-bottom: 4px;
+            letter-spacing: 0.1px;
+            margin-bottom: 40px;
           }
-
-          .work {
-            color: #32324b;
-            opacity: 0.7;
-            text-transform: capitalize;
+    
+          .testifier {
+            display: flex;
+            // justify-content: space-between;
+            align-items: center;
+    
+            .testifier__about {
+              margin: 0 20px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+    
+              .name {
+                text-transform: capitalize;
+                font-size: 18px;
+                font-weight: 600;
+                color: #000b33;
+                margin-bottom: 4px;
+              }
+    
+              .work {
+                color: #32324b;
+                opacity: 0.7;
+                text-transform: capitalize;
+              }
+            }
           }
         }
       }
@@ -154,14 +168,47 @@
 
     .arrow-left {
       position: absolute;
-      left: 0;
-      bottom: 150px;
+      left: 100px;
+      bottom: 80px;
+      cursor: pointer;
     }
 
     .arrow-right {
       position: absolute;
-      right: 0;
-      bottom: 150px;
+      right: 100px;
+      bottom: 80px;
+      cursor: pointer;
+    }
+  }
+}
+@media only screen and (max-width: $w1440px) {
+  .testimonial {
+    &__carousel{
+
+      .carousel {
+        .carousel__container {
+          .carousel__item {
+            min-width: 100vw;
+          }
+  
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $w1441px) {
+  .testimonial {
+    &__carousel{
+
+      .carousel {
+        .carousel__container {
+          .carousel__item {
+            min-width: 1440px;
+          }
+  
+        }
+      }
     }
   }
 }
