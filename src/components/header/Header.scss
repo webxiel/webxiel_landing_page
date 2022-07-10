@@ -1,0 +1,152 @@
+$w915px: 915px;
+$w800px: 800px;
+$w700px: 700px;
+
+
+.header {
+  font-size: inherit;
+  background-color: #001C80;
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  color: #fff;
+  padding: 1.1rem 7.5rem;
+  overflow: hidden;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+
+    .nav__links {
+      display: flex;
+
+      .link{
+        padding: 0 .5em;
+        margin-left: 1.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+  
+        span {
+          text-transform: capitalize;
+          font-weight: 500;
+        }
+      }
+
+      .nav__link {
+        @extend .link;
+        .nav__link__dash{
+          display: none;
+        }
+      }
+      .nav__link--active{
+        @extend .link;
+        .nav__link__dash {
+          display: inline-block;
+        }
+      }
+
+    }
+  }
+
+  .menu-bar {
+    display: none;
+    cursor: pointer;
+  }
+
+  .hero {
+    height: 100%;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      font-weight: 600;
+      font-size: 3.25rem;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+    }
+
+    .text {
+      max-width: 512px;
+      font-size: 18px;
+    }
+  }
+
+  .yellow-left {
+    position: absolute;
+    left: -1px;
+    bottom: 30px;
+
+  }
+
+  .yellow-right {
+    position: absolute;
+    right: -3px;
+    bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: $w915px) {
+  .header {
+    padding: 1.1rem 4rem;
+  }
+
+  @media only screen and (max-width: $w800px) {
+    .header {
+      padding: 12px 20px;
+
+      .nav {
+        .nav__links {
+          display: none;
+        }
+
+        .menu-bar {
+          display: inline-block;
+        }
+      }
+
+    }
+  }
+
+  @media only screen and (max-width: $w700px) {
+    .header {
+      height: 282px;
+
+      .hero {
+        .title {
+          font-size: 28px;
+        }
+
+        .text {
+          font-size: 12px;
+          max-width: 250px;
+        }
+      }
+
+      .yellow-left {
+        width: 28px !important;
+        height: 56px;
+        bottom: 12px;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .yellow-right {
+        width: 41px;
+        height: 123px;
+        bottom: 0px;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
