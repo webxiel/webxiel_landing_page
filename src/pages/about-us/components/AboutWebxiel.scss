@@ -1,0 +1,130 @@
+$w1000px: 1000px;
+$w700px: 700px;
+
+.about-webxiel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  column-gap: 40px;
+  row-gap: 70px;
+
+  &__cards{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    // width: 526px;
+    min-width: 500px;
+    // min-width: 343px;
+
+    .left{
+      align-self: flex-start !important;
+    }
+
+    &__card{
+      max-width: 440px;
+      min-width: 343px;
+      display: flex;
+      column-gap: 20px;
+      padding: 30px;
+      align-items: center;
+      box-shadow: 0px 4px 40px rgba(43, 89, 255, 0.08);
+      border-radius: 8px;
+      margin-bottom: 30px;
+
+      &__details{
+        .title{
+          font-size: 18px;
+          font-weight: 600;
+          color: #000b33;
+          margin-bottom: 8px;
+          text-transform: capitalize;
+        }
+        .text{
+          color: #32324B;
+          opacity: 0.7;
+
+        }
+      }
+    }
+  }
+
+  &__get-started{
+    max-width: 526px;
+
+    &__title{
+      font-size: 18px;
+      color: #001C80;
+      margin-bottom: 12px;
+      text-transform: capitalize;
+    }
+    &__info{
+      font-size: 36px;
+      color: #000b33;
+      font-weight: 500;
+      letter-spacing: 0.0025em;
+      margin-bottom: 16px;
+    }
+    &__text{
+      color: #32324B;
+      opacity: 0.7;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: $w1000px) {
+  .about-webxiel{
+    flex-direction: column;
+    text-align: center;
+    
+    &__cards{
+      order: 1;
+      text-align: left;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: $w700px) {
+  .about-webxiel{
+    &__cards {
+        min-width: 343px;
+    
+        &__card {
+          min-width: 343px;
+          padding: 24px;
+    
+          &__details {
+            .title {
+              font-size: 16px;
+            }
+    
+            .text {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    
+      &__get-started {
+        max-width: 526px;
+    
+        &__title {
+          font-size: 18px;
+        }
+    
+        &__info {
+          font-size: 24px;
+          margin-bottom: 12px;
+        }
+    
+        &__text {
+          font-size: 12px;
+          margin-bottom: 20px;
+        }
+      }
+  }
+}
