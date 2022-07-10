@@ -16,7 +16,7 @@ const navLinksArray = [
   "home",
   "about us",
   "services",
-  "productions",
+  "products",
   "partners"
 ];
 
