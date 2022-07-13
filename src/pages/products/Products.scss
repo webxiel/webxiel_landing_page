@@ -1,0 +1,17 @@
+.products{
+  width: 100vw;
+
+  .products__header {
+    text-align: center;
+    padding: 120px 120px 10px;
+
+    .products__header__title {
+      font-size: 52px;
+      font-weight: 600;
+      line-height: 1.2em;
+      color: #001C80;
+      text-transform: capitalize;
+      margin-bottom: 2em;
+    }
+  }
+}

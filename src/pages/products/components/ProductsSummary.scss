@@ -1,0 +1,149 @@
+.products__container{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+
+  .products__product{
+    width: 100%;
+    
+    .product__intro{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 110px;
+      column-gap: 40px;
+      row-gap: 60px;
+      
+      .product__image{
+        width: 48%;
+        max-width: 560px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        svg{
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: -1;
+        }
+        img{
+          margin-bottom: 40px;
+          // max-width: 279px;
+          width: 50%;
+        }
+        .product__image__users{
+          background: #00BB98;
+          left: 0;
+          top: 120px;
+        }
+        .product__image__jobs{
+          background: #FDA800;
+          right: 0;
+          bottom: 300px;
+        }
+        .product__image__jobs, .product__image__users{
+          min-width: 163px;
+          // height: 83px;
+          padding: 10px;
+          border-radius: 10px;
+          color: #ffffff;
+          text-transform: capitalize;
+          position: absolute;
+
+          .jobs{
+            font-size: 14px;
+          }
+          .number{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.2em;
+          }
+        }
+      }
+
+      .product__details{
+        width: 48%;
+        max-width: 486px;
+        text-align: left;
+
+        .product__title {
+          font-weight: 500;
+          font-size: 36px;
+          line-height: 1.3em;
+          color: #000b33;
+          text-transform: capitalize;
+          margin-bottom: 0.4em;
+        }
+      
+        .product__text {
+          letter-spacing: 0.1px;
+          color: #32324b;
+          margin-bottom: 1em;
+          opacity: 0.7;
+        }
+
+        svg{
+          margin-right: 20px;
+        }
+      }
+
+
+    }
+
+    .product__manual{
+      width: 100%;
+      h3{
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.2em;
+        color: #001C80;
+        text-transform: capitalize;
+        margin-bottom: 1.1em;
+      }
+      .product__how-it-works{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        column-gap: 60px;
+        padding: 40px 110px;
+
+        article{
+          width: 330px;
+          padding: 10px;
+
+          .how-it-works__step{
+            color: #303030;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: capitalize;
+            margin: .5em .2em;
+          }
+          .how-it-works__details{
+            color: #32324B;
+            opacity: 0.7;
+            letter-spacing: 0.1px;
+          }
+        }
+      }
+      .product__screens{
+        width: 100%;
+        overflow-x: scroll;
+        
+        .product__screens__container{
+          width: max-content;
+          padding-bottom: 50px;
+          display: flex;
+          column-gap: 10px;
+          justify-content: center;
+          margin: o 5px;
+        }
+      }
+    }
+
+  }
+}
