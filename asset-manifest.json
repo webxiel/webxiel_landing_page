@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/webxiel_landing_page/static/css/main.6782c7ee.css",
-    "main.js": "/webxiel_landing_page/static/js/main.63bba6c6.js",
+    "main.js": "/webxiel_landing_page/static/js/main.1692c66f.js",
     "static/js/787.a41025f9.chunk.js": "/webxiel_landing_page/static/js/787.a41025f9.chunk.js",
     "static/media/social-media-desktop.png": "/webxiel_landing_page/static/media/social-media-desktop.1e34fea0c792e10396c6.png",
     "static/media/home-lady.png": "/webxiel_landing_page/static/media/home-lady.ad965c20714da3b764d2.png",
@@ -47,11 +47,11 @@
     "static/media/product-bg.svg": "/webxiel_landing_page/static/media/product-bg.79092ff581522d09792375edcf12d043.svg",
     "static/media/nav-link-dash.svg": "/webxiel_landing_page/static/media/nav-link-dash.28285f03371a46793c10521d9eb3b611.svg",
     "main.6782c7ee.css.map": "/webxiel_landing_page/static/css/main.6782c7ee.css.map",
-    "main.63bba6c6.js.map": "/webxiel_landing_page/static/js/main.63bba6c6.js.map",
+    "main.1692c66f.js.map": "/webxiel_landing_page/static/js/main.1692c66f.js.map",
     "787.a41025f9.chunk.js.map": "/webxiel_landing_page/static/js/787.a41025f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6782c7ee.css",
-    "static/js/main.63bba6c6.js"
+    "static/js/main.1692c66f.js"
   ]
 }
