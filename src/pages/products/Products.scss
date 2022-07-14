@@ -1,3 +1,6 @@
+$w700px: 700px;
+
+
 .products{
   width: 100vw;
 
@@ -13,5 +16,19 @@
       text-transform: capitalize;
       margin-bottom: 2em;
     }
+  }
+}
+@media only screen and (max-width: $w700px) {
+  .products{
+    .products__header {
+      padding: 60px 40px 5px;
+
+      .products__header__title {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.2em;
+        margin-bottom: .3em;
+      }
+    }  
   }
 }
