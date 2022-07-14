@@ -56,7 +56,7 @@ let testimonyArray = testimonyData.map((item: testimonyItem) => {
 export const TestimonyLogic = () => {
   return (
     <>
-      <Carousel slideCount={1} goRight={false} itemsArray={testimonyArray} />
+      <Carousel slideCount={1} goRight={false} itemsArray={testimonyArray} autoSlide={true}/>
     </>
   )
 }

@@ -1,14 +1,17 @@
 $w1440px: 1440px;
 $w1441px: 1441px;
+$w1000px: 1000px;
+$w700px: 700px;
 
 .testimonial {
   padding: 130px 120px 30px;
   position: relative;
+  overflow: hidden;
 
   &__right-shape {
     position: absolute;
     right: 0;
-    top: -100px;
+    top: 0px !important;
   }
 
   &__header {
@@ -123,6 +126,92 @@ $w1441px: 1441px;
       }
     }
   }
+
+  @media only screen and (max-width: $w1000px) {
+    .testimonial {
+      padding-top: 100px !important;
+
+      &__right-shape {
+        width: 120px !important;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $w700px) {
+    .testimonial{
+      padding: 100px 40px 20px !important;
+      &__header {
+        margin-bottom: 20px;
+    
+        &__title {
+          font-size: 20px !important;
+          font-weight: 600 !important;
+          margin-bottom: 20px;
+        }
+    
+        &__text {
+          font-size: 25px !important;
+          line-height: 1.3em;
+          max-width: 636px;
+          margin: 0 auto 10px;
+        }
+      }
+      
+      &__carousel {
+
+        .carousel__container {
+
+          .carousel__item {
+
+            .carousel__item__container {
+              width: 90% !important;
+              height: 266px !important;
+              margin: 0 auto;
+              padding: 20px !important;
+
+              .testimony {
+                font-size: 14px !important;
+                margin-bottom: 30px !important;
+              }
+
+              .testifier {
+                .testifier__about {
+                  .name {
+                    font-size: 16px !important;
+                    font-weight: 500 !important;
+                  }
+
+                  .work {
+                    font-size: 14px !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .arrow-left {
+          position: absolute;
+          left: 100px;
+          bottom: 80px;
+          cursor: pointer;
+          display: none ;
+        }
+
+        .arrow-right {
+          display: none;
+          position: absolute;
+          right: 100px;
+          bottom: 80px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $w1441px) {
@@ -140,3 +229,6 @@ $w1441px: 1441px;
     }
   }
 }
+
+
+
