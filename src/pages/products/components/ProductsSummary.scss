@@ -1,3 +1,8 @@
+$w1100px: 1100px;
+$w950px: 950px;
+$w700px: 700px;
+
+
 .products__container{
   display: flex;
   flex-direction: column;
@@ -10,13 +15,15 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 110px;
+      padding: 90px 90px 0;
       column-gap: 40px;
-      row-gap: 60px;
+      row-gap: 80px;
       
       .product__image{
+        overflow: hidden;
         width: 48%;
         max-width: 560px;
+        min-width: 460px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -25,7 +32,7 @@
         svg{
           position: absolute;
           width: 100%;
-          bottom: 0;
+          bottom: -40px;
           left: 0;
           right: 0;
           z-index: -1;
@@ -43,7 +50,7 @@
         .product__image__jobs{
           background: #FDA800;
           right: 0;
-          bottom: 300px;
+          top: 200px;
         }
         .product__image__jobs, .product__image__users{
           min-width: 163px;
@@ -146,4 +153,115 @@
     }
 
   }
+}
+@media only screen and (max-width: $w1100px) {
+  .products__container{
+    .products__product{
+      .product__intro{
+        padding: 100px 50px 0 !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $w950px) {
+  .products__container {
+    .products__product {
+      .product__intro {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 50px 0 !important;
+
+        .product__image{
+          order: 1;
+          
+        }
+
+        .product__details {
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+        
+            .product__title {
+              font-weight: 500;
+              font-size: 36px;
+              margin-bottom: 0.7em;
+            }
+        
+            .product__text {
+              letter-spacing: 0.1px;
+              margin-bottom: 2em;
+            }
+        
+            svg {
+              margin-right: 40px;
+            }
+          }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $w700px) {
+  .products__container {
+      .products__product {
+        .product__intro {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 0 0 !important;
+          row-gap: 20px;
+  
+          .product__image {
+            order: 1;
+            width: 100%;
+            min-width: 350px;
+            background: url("../../../assets/images/product-bg.svg") no-repeat bottom;
+            
+            svg {
+              width: 560px;
+              display: none;
+            }
+          
+            img {
+              width: 279px;
+            }
+
+            .product__image__users {
+              background: #00BB98;
+              left: 14px;
+              top: 120px;
+            }
+  
+            .product__image__jobs {
+              background: #FDA800;
+              right: 14px;
+              top: 200px;
+            }
+          }
+  
+          .product__details {
+            width: 100%;
+            max-width: 700px;
+            padding: 0 40px;
+            text-align: center;
+  
+            .product__title {
+              font-size: 16px;
+              margin-bottom: 0.7em;
+            }
+  
+            .product__text {
+              font-size: 13px;
+              letter-spacing: 0.1px;
+              margin-bottom: 1.4em;
+            }
+  
+            svg {
+              margin-right: 16px;
+              width: 101px;
+            }
+          }
+        }
+      }
+    }
 }

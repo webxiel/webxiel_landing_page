@@ -180,4 +180,76 @@ const ProductsLogic = () => {
   )
 }
 
+export const ProductsSummary = () => {
+  return(
+    <section className="products__container">
+      {
+        productsData.map((product: product, index) => {
+          const { image, users, jobs, title, details} = product;
+
+          return (
+            (index + 2) % 2 == 0 ? 
+            (
+              <article className="products__product" key={title}>
+                <section className="product__intro">
+                  <figure className="product__image">
+                    <ProductBg />
+                    <div className="product__image__users">
+                      <p className="number">{users}</p>
+                      <p className="users">users</p>
+                    </div>
+                    <div className="product__image__jobs">
+                      <p className="number">{jobs}</p>
+                      <p className="jobs">Laundries processed</p>
+                    </div>
+                    <img src={image} alt="macbook" />
+                  </figure>
+                  <div className="product__details product__details--left">
+                    <h2 className="product__title">{title}</h2>
+                    <p className="product__text">
+                      {details}
+                    </p>
+                    <figure className="download-buttons">
+                      <AppStore /> 
+                      <PlayStore />
+                    </figure>
+                  </div>
+                </section>
+            </article>
+            ) :
+            (
+              <article className="products__product" key={title}>
+                <section className="product__intro">
+                  <div className="product__details product__details--right">
+                    <h2 className="product__title">{title}</h2>
+                    <p className="product__text">
+                      {details}
+                    </p>
+                    <figure className="download-buttons">
+                      <AppStore /> 
+                      <PlayStore />
+                    </figure>
+                  </div>
+                  <figure className="product__image">
+                    <ProductBg />
+                    <div className="product__image__users">
+                      <p className="number">{users}</p>
+                      <p className="users">users</p>
+                    </div>
+                    <div className="product__image__jobs">
+                      <p className="number">{jobs}</p>
+                      <p className="jobs">Laundries processed</p>
+                    </div>
+                    <img src={image} alt="iphone" />
+                  </figure>
+                </section>
+            </article>
+            )
+          )
+        })
+      }
+    </section>
+  )
+}
+
 export default ProductsLogic
