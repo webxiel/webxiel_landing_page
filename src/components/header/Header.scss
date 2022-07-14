@@ -99,8 +99,16 @@ $w700px: 700px;
       padding: 12px 20px;
 
       .nav {
-        .nav__links {
+        position: relative;
+        .hide-nav{
           display: none;
+        }
+        .nav__links{
+          flex-direction: column;
+          position: absolute;
+          top: 0px;
+          right: 30px;
+          font-size: 14px;
         }
 
         .menu-bar {

@@ -5,14 +5,17 @@ import {ReactComponent as YellowLeft} from '../../assets/images/yellow-left.svg'
 import {ReactComponent as Menubar} from '../../assets/images/Menubar.svg'
 import {NavLink} from "react-router-dom"
 import { ReactComponent as ActiveNavDash } from "../../assets/images/nav-link-dash.svg"
+import { useState } from 'react';
 
 
 type headerProps = {
   title: string,
   text: string,
+  showText?: boolean,
+  children?: React.ReactNode
 }
 
-const navLinksArray = [
+export const navLinksArray = [
   "home",
   "about us",
   "services",
@@ -20,19 +23,21 @@ const navLinksArray = [
   "partners"
 ];
 
-const Header = ({title, text}: headerProps) => {
+const Header = ({title, text, showText= true, children}: headerProps) => {
+  const [ showNav, setShowNav ] = useState(false);
+
+
   return (
     <header className="header">
       <section className="nav">
         <figure className="logo">
           <Logo />
         </figure>
-        <nav className="nav__links">
+        <nav className={showNav ? "nav__links" : "nav__links hide-nav"}>
           {navLinksArray.map((navItem: string) => {
             let words = navItem.split(" ");
             let newword : string;
             words.length == 2 ? newword = words[0] + "-" + words[1] : newword = navItem;
-            console.log(newword);
             
             return (
               <NavLink className={({ isActive }) => isActive ? "nav__link--active" : "nav__link"} 
@@ -49,13 +54,23 @@ const Header = ({title, text}: headerProps) => {
             )
           })}
         </nav>
-        <figure className="menu-bar">
+        <figure className="menu-bar" onClick={() => setShowNav(!showNav)}>
           <Menubar />
         </figure>
       </section>
       <section className="hero">
-        <h1 className="title">{title}</h1>
-        <p className="text">{text}</p>
+        {
+          showText ?
+          (
+            <>
+              <h1 className="title">{title}</h1>
+              <p className="text">{text}</p>
+            </>
+          ) :
+          (
+            <>{children}</>
+          )
+        }
       </section>
       <figure className="yellow-left">
         <YellowLeft />
