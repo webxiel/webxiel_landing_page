@@ -81,16 +81,37 @@ $w750px: 750px;
 
 @media only screen and (max-width: $w750px) {
   .footer {
-    min-height: 502px;
-    padding: 80px 20px;
+    min-height: 400px;
+    padding: 50px 20px 20px;
 
     &__content {
-      margin-bottom: 70px;
+      margin-bottom: 50px;
+
+      &__company{
+        row-gap: 15px;
+        &__service{
+          font-size: 14px;
+        }
+      }
+      &__contact-info{
+        h2{
+          font-size: 16px;
+        }
+        figure{
+          p{
+            font-size: 14px;
+          }
+        }
+      }
     }
 
     &__copyright {
       text-align: left !important;
       margin-left: 0;
+
+      &__text {
+        font-size: 14px;
+      }
     }
   }
 }
