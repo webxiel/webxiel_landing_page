@@ -5,6 +5,7 @@ import uiUxImg from '../../assets/images/ui-ux-desktop.png'
 import socialMediaImg from '../../assets/images/social-media-desktop.png'
 import client from '../../assets/images/client-desktop.png'
 import Carousel from '../../components/carousel/Carousel'
+import { ReactComponent as ServiceIcon } from '../../assets/images/service-icon.svg'
 
 
 export type service = {
@@ -41,6 +42,34 @@ export const servicesArray: service[] = [
     buttonText: "get service"
   },
 ]
+
+
+
+export const ServiceSummary = () => {
+
+  return (
+    <>
+    {
+      servicesArray.map((service: service) => {
+        const {title, details} = service;
+        return (
+          <article className="service">
+            <figure className="service__icon">
+              <ServiceIcon />
+            </figure>
+            <h3 className="service__title">
+              {title}
+            </h3>
+            <p className="service__details">
+              {details}
+            </p>
+          </article>
+        )
+      })
+    }
+    </>
+  )
+}
 
 
 
