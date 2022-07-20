@@ -9,47 +9,47 @@ type carouselProps = {
   autoSlide?: boolean,
 }
 
-const Carousel = ({ slideCount, goRight=false, autoSlide = false, itemsArray }: carouselProps) => {
+const Carousel = ({ slideCount, goRight = false, autoSlide = false, itemsArray }: carouselProps) => {
 
-  const [ currentSlide, setCurrentSlide ] = useState(0);
-  
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   // set a variable to hold number of times the carousel should slide
   let countDivider: number = 1;
-  ((itemsArray?.length % slideCount) == 0 ) ? 
-  (countDivider = itemsArray.length / slideCount) : 
-  (countDivider = Math.floor(itemsArray.length / slideCount) + 1); 
-  
+  ((itemsArray?.length % slideCount) == 0) ?
+    (countDivider = itemsArray.length / slideCount) :
+    (countDivider = Math.floor(itemsArray.length / slideCount) + 1);
+
   // check direction of the carousel slider
   useEffect(() => {
-    goRight ? setCurrentSlide(-(countDivider -1)) : setCurrentSlide(0);
+    goRight ? setCurrentSlide(-(countDivider - 1)) : setCurrentSlide(0);
   }, [goRight])
 
 
 
-  const slideInterval:{current: NodeJS.Timer | null} = useRef(null);
+  const slideInterval: { current: NodeJS.Timer | null } = useRef(null);
 
 
   const nextSlide = () => {
-    if(goRight){
+    if (goRight) {
       currentSlide < 0 ?
         setCurrentSlide(currentSlide => currentSlide + 1) :
-          setCurrentSlide(-(countDivider - 1));
+        setCurrentSlide(-(countDivider - 1));
     } else {
-      currentSlide < countDivider - 1 ? 
+      currentSlide < countDivider - 1 ?
         setCurrentSlide(currentSlide => currentSlide + 1) :
-          setCurrentSlide(0);
+        setCurrentSlide(0);
     }
   }
 
   const prevSlide = () => {
-    if(goRight) {
+    if (goRight) {
       currentSlide > -(countDivider - 1) ?
         setCurrentSlide(currentSlide => currentSlide - 1) :
-          setCurrentSlide(0);
+        setCurrentSlide(0);
     } else {
-      currentSlide > 0 ? 
+      currentSlide > 0 ?
         setCurrentSlide(currentSlide => currentSlide - 1) :
-         setCurrentSlide(countDivider - 1); 
+        setCurrentSlide(countDivider - 1);
     }
   }
 
@@ -61,7 +61,7 @@ const Carousel = ({ slideCount, goRight=false, autoSlide = false, itemsArray }: 
 
   // handle auto slide
   useEffect(() => {
-    if(autoSlide) {
+    if (autoSlide) {
       startSlideTimer();
 
       return () => stopSlideTimer();
@@ -71,22 +71,23 @@ const Carousel = ({ slideCount, goRight=false, autoSlide = false, itemsArray }: 
   const startSlideTimer = () => {
     stopSlideTimer();
     slideInterval.current = setInterval(() => {
-      if(goRight) {
+      if (goRight) {
         setCurrentSlide(currentSlide => currentSlide < 0 ? currentSlide + 1 : -(countDivider - 1));
       } else {
         setCurrentSlide(currentSlide => currentSlide < countDivider - 1 ? currentSlide + 1 : 0)
       }
-    }, 3000);
+    }, 5000);
   }
 
 
   return (
     <section className="carousel">
-      <div className="carousel__container" 
-      style={{transform: `translateX(${
-        goRight ? 
-          ((currentSlide / (countDivider - 1)) * ((countDivider - 1) * 100)) : 
-          -((currentSlide / (countDivider - 1)) * ((countDivider - 1) * 100))}%)`}}>
+      <div className="carousel__container"
+        style={{
+          transform: `translateX(${goRight ?
+            ((currentSlide / (countDivider - 1)) * ((countDivider - 1) * 100)) :
+            -((currentSlide / (countDivider - 1)) * ((countDivider - 1) * 100))}%)`
+        }}>
         {itemsArray}
       </div>
       <figure className="arrow-right" onClick={nextSlide}>
