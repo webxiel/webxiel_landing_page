@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/webxiel_landing_page/static/css/main.3a02a664.css",
+    "main.css": "/webxiel_landing_page/static/css/main.dd6bfe1a.css",
     "main.js": "/webxiel_landing_page/static/js/main.0c81e2ac.js",
     "static/js/787.a41025f9.chunk.js": "/webxiel_landing_page/static/js/787.a41025f9.chunk.js",
     "static/media/social-media-desktop.png": "/webxiel_landing_page/static/media/social-media-desktop.1e34fea0c792e10396c6.png",
@@ -45,12 +45,12 @@
     "static/media/shape-yellow.svg": "/webxiel_landing_page/static/media/shape-yellow.a92b772670debd4e9f99c7a6e89b7244.svg",
     "static/media/product-bg.svg": "/webxiel_landing_page/static/media/product-bg.79092ff581522d09792375edcf12d043.svg",
     "static/media/nav-link-dash.svg": "/webxiel_landing_page/static/media/nav-link-dash.28285f03371a46793c10521d9eb3b611.svg",
-    "main.3a02a664.css.map": "/webxiel_landing_page/static/css/main.3a02a664.css.map",
+    "main.dd6bfe1a.css.map": "/webxiel_landing_page/static/css/main.dd6bfe1a.css.map",
     "main.0c81e2ac.js.map": "/webxiel_landing_page/static/js/main.0c81e2ac.js.map",
     "787.a41025f9.chunk.js.map": "/webxiel_landing_page/static/js/787.a41025f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a02a664.css",
+    "static/css/main.dd6bfe1a.css",
     "static/js/main.0c81e2ac.js"
   ]
 }
