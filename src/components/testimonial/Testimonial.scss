@@ -1,5 +1,5 @@
-$w1440px: 1440px;
-$w1441px: 1441px;
+$w1500px: 1500px;
+$w1501px: 1501px;
 $w1000px: 1000px;
 $w700px: 700px;
 
@@ -7,6 +7,8 @@ $w700px: 700px;
   padding: 130px 120px 30px;
   position: relative;
   overflow: hidden;
+  max-width: 1500px !important;
+  margin: 0 auto !important;
 
   &__right-shape {
     position: absolute;
@@ -38,6 +40,8 @@ $w700px: 700px;
 
   &__carousel {
     width: 100%;
+    max-width: 1500px !important;
+    margin: 0 auto;
     position: relative;
     overflow: hidden;
 
@@ -112,14 +116,14 @@ $w700px: 700px;
   }
 }
 
-@media only screen and (max-width: $w1440px) {
+@media only screen and (max-width: $w1500px) {
   .testimonial {
     &__carousel {
 
       .carousel {
         .carousel__container {
           .carousel__item {
-            min-width: 100vw;
+            min-width: 100vw !important;
           }
 
         }
@@ -214,14 +218,14 @@ $w700px: 700px;
   }
 }
 
-@media only screen and (min-width: $w1441px) {
+@media only screen and (min-width: $w1500px) {
   .testimonial {
     &__carousel {
 
       .carousel {
         .carousel__container {
           .carousel__item {
-            min-width: 1440px;
+            min-width: 1500px !important;
           }
 
         }
