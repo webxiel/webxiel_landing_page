@@ -39,6 +39,7 @@ const Footer = () => {
           </figure>
         </article>
       </section>
+      <hr />
       <section className="footer__copyright">
         <p className="footer__copyright__text">
           &copy; 2021 webxiel all rights reserved.
