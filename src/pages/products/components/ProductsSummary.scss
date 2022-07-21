@@ -7,6 +7,8 @@ $w700px: 700px;
   display: flex;
   flex-direction: column;
   width: 100vw;
+  max-width: 1500px;
+  margin: 0 auto;
 
   .products__product{
     width: 100%;
@@ -149,7 +151,7 @@ $w700px: 700px;
           display: flex;
           column-gap: 10px;
           justify-content: center;
-          margin: o 5px;
+          margin: 0 auto;
         }
       }
     }

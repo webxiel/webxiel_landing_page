@@ -3,6 +3,8 @@ $w700px: 700px;
 
 .products{
   width: 100vw;
+  max-width: 1500px;
+  margin: 0 auto;
 
   .products__header {
     text-align: center;
