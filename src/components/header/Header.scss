@@ -135,6 +135,7 @@ $w700px: 700px;
         left: 0;
         right: 0;
         top: 0;
+        z-index: 100;
         background-color: #fff;
 
         .nav__mobile__top{
@@ -155,8 +156,8 @@ $w700px: 700px;
           flex-direction: column;
           align-items: center;
           font-weight: 500;
-          font-size: 24px;
-          padding: 20px 10px;
+          font-size: 23px;
+          padding: 0px 10px 20px;
 
           .nav__link{
             text-transform: capitalize;
