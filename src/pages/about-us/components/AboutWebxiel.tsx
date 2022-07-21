@@ -3,6 +3,7 @@ import { ReactComponent as Delivery } from '../../../assets/images/delivery.svg'
 import { ReactComponent as Powerful } from '../../../assets/images/powerful.svg'
 import Button from "../../../components/button/Button";
 import "./AboutWebxiel.scss"
+import { Link } from 'react-router-dom'
 
 
 type aboutWebxiel = {
@@ -29,41 +30,41 @@ const aboutWebxielData = [
   }
 ];
 
-let aboutWebxielArray =  aboutWebxielData.map((item: aboutWebxiel, index) => {
-  const {icon, title, details} = item;
+let aboutWebxielArray = aboutWebxielData.map((item: aboutWebxiel, index) => {
+  const { icon, title, details } = item;
 
   return (
-    (index + 2 ) % 2 == 0 ? 
-    (
-      <article className="about-webxiel__cards__card">
-        <figure className="about-webxiel__cards__card__icon">
-          {icon}
-        </figure>
-        <figcaption className="about-webxiel__cards__card__details">
-          <h3 className="title">
-            {title}
-          </h3>
-          <p className="text">
-            {details}
-          </p>
-        </figcaption>
-      </article>
-    ) :
-    (
-      <article className="about-webxiel__cards__card left">
-        <figure className="about-webxiel__cards__card__icon">
-          {icon}
-        </figure>
-        <figcaption className="about-webxiel__cards__card__details">
-          <h3 className="title">
-            {title}
-          </h3>
-          <p className="text">
-            {details}
-          </p>
-        </figcaption>
-      </article>
-    )
+    (index + 2) % 2 == 0 ?
+      (
+        <article className="about-webxiel__cards__card">
+          <figure className="about-webxiel__cards__card__icon">
+            {icon}
+          </figure>
+          <figcaption className="about-webxiel__cards__card__details">
+            <h3 className="title">
+              {title}
+            </h3>
+            <p className="text">
+              {details}
+            </p>
+          </figcaption>
+        </article>
+      ) :
+      (
+        <article className="about-webxiel__cards__card left">
+          <figure className="about-webxiel__cards__card__icon">
+            {icon}
+          </figure>
+          <figcaption className="about-webxiel__cards__card__details">
+            <h3 className="title">
+              {title}
+            </h3>
+            <p className="text">
+              {details}
+            </p>
+          </figcaption>
+        </article>
+      )
   )
 });
 
@@ -80,7 +81,9 @@ const AboutWebxiel = () => {
         <p className="about-webxiel__get-started__text">
           We are a web based company looking at enabling business strive better online, using better web technologies.
         </p>
-        <Button text="get started" />
+        <Link to='/contact-us'>
+          <Button text='get started' />
+        </Link>
       </section>
     </section>
   )
