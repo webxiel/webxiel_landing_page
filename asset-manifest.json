@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/webxiel_landing_page/static/css/main.6782c7ee.css",
-    "main.js": "/webxiel_landing_page/static/js/main.5df2a20e.js",
+    "main.css": "/webxiel_landing_page/static/css/main.a4e3be4f.css",
+    "main.js": "/webxiel_landing_page/static/js/main.0db3be18.js",
     "static/js/787.a41025f9.chunk.js": "/webxiel_landing_page/static/js/787.a41025f9.chunk.js",
     "static/media/social-media-desktop.png": "/webxiel_landing_page/static/media/social-media-desktop.1e34fea0c792e10396c6.png",
-    "static/media/home-lady.png": "/webxiel_landing_page/static/media/home-lady.ad965c20714da3b764d2.png",
     "static/media/ui-ux-desktop.png": "/webxiel_landing_page/static/media/ui-ux-desktop.f5ceadac53002ad5125a.png",
     "static/media/our-story.png": "/webxiel_landing_page/static/media/our-story.258a82bac197e7a8008a.png",
     "static/media/mobileapp-desktop.png": "/webxiel_landing_page/static/media/mobileapp-desktop.7b804d4be47e9e294586.png",
     "static/media/webapp-desktop.png": "/webxiel_landing_page/static/media/webapp-desktop.547090cc83d7c41048e1.png",
+    "static/media/hero.svg": "/webxiel_landing_page/static/media/hero.2c05764adfcc88ed9c0a1f80401fa736.svg",
     "static/media/screen3.png": "/webxiel_landing_page/static/media/screen3.c8bdf1d33c04151f6070.png",
     "static/media/team-guy.png": "/webxiel_landing_page/static/media/team-guy.18e42e73749f8f885472.png",
     "static/media/play-store.svg": "/webxiel_landing_page/static/media/play-store.c5149d94caea224be6e05c75acecbb71.svg",
@@ -25,7 +25,6 @@
     "static/media/order.svg": "/webxiel_landing_page/static/media/order.d7ff0802a7d6a28e82063fa04d95b0ba.svg",
     "static/media/shop.svg": "/webxiel_landing_page/static/media/shop.37f94f7c0085d9ede020578bb07eb098.svg",
     "static/media/Logo.svg": "/webxiel_landing_page/static/media/Logo.1473c479e65a9ad653851ae278e16629.svg",
-    "static/media/home-lady-bg.svg": "/webxiel_landing_page/static/media/home-lady-bg.40261daf9a6b1853811a907d9efd8e08.svg",
     "static/media/performance.svg": "/webxiel_landing_page/static/media/performance.cddbe0b947f07896bf2361e6f0d60e4c.svg",
     "static/media/update-design.svg": "/webxiel_landing_page/static/media/update-design.c5a59fe7335063128512327f32f6ba10.svg",
     "static/media/powerful.svg": "/webxiel_landing_page/static/media/powerful.a92e21d516065ef09d0c70d3ae1cc417.svg",
@@ -46,12 +45,12 @@
     "static/media/shape-yellow.svg": "/webxiel_landing_page/static/media/shape-yellow.a92b772670debd4e9f99c7a6e89b7244.svg",
     "static/media/product-bg.svg": "/webxiel_landing_page/static/media/product-bg.79092ff581522d09792375edcf12d043.svg",
     "static/media/nav-link-dash.svg": "/webxiel_landing_page/static/media/nav-link-dash.28285f03371a46793c10521d9eb3b611.svg",
-    "main.6782c7ee.css.map": "/webxiel_landing_page/static/css/main.6782c7ee.css.map",
-    "main.5df2a20e.js.map": "/webxiel_landing_page/static/js/main.5df2a20e.js.map",
+    "main.a4e3be4f.css.map": "/webxiel_landing_page/static/css/main.a4e3be4f.css.map",
+    "main.0db3be18.js.map": "/webxiel_landing_page/static/js/main.0db3be18.js.map",
     "787.a41025f9.chunk.js.map": "/webxiel_landing_page/static/js/787.a41025f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6782c7ee.css",
-    "static/js/main.5df2a20e.js"
+    "static/css/main.a4e3be4f.css",
+    "static/js/main.0db3be18.js"
   ]
 }
